@@ -1,6 +1,10 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
+gem "rake"
 gem "itamae"
-gem "serverspec"
 gem "itamae-plugin-recipe-rtn_rbenv"
+
+group :test do
+  gem "serverspec"
+end
