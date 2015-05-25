@@ -31,5 +31,5 @@ task :itamae, :role do |t, args|
   user = ENV['USER'] || 'vagrant'
   host = ENV['HOST'] || 'vagrant'
   role = args[:role] || ENV['ROLE'] || 'development'
-  sh "bundle exec itamae ssh -u #{user} -h #{host} -j roles/#{role}.json #{ENV['COOKBOOK']}"
+  sh "bundle exec itamae ssh -u #{user} -h #{host} -y roles/#{role}.yml #{ENV['COOKBOOK']}"
 end
