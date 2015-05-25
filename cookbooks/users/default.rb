@@ -1,6 +1,6 @@
 node[:users].each do |u|
   name = u[:id]
-  home = u.has_key?(:home) ? u[:home] : "/home/#{name}"
+  home = u[:home] || "/home/#{name}"
 
   user name do
     home home
