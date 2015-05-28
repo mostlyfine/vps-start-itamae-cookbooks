@@ -5,7 +5,7 @@ rtn_rbenv:
     2.2.2:
       - bundler
       - pry
-      - rake
+
 users:
   - id: sawa
     password: "$1$E7l6oltO$7Iz2YDdWQwIZSwP0MgbZd0"
