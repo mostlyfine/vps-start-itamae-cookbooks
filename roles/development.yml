@@ -1,4 +1,11 @@
 admin_group: wheel
+
+plenv:
+  path: /usr/local/plenv
+  global: 5.22.0
+  versions:
+    - 5.22.0
+
 rtn_rbenv:
   global: 2.2.2
   versions:
