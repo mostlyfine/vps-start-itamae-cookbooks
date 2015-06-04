@@ -1,6 +1,6 @@
 include_recipe "./common.rb"
 
-version = node[:nginx][:version]
+version = node[:nginx] && node[:nginx][:version] ? node[:nginx][:version] : "1.9.1"
 srcfile = "/usr/local/src/nginx-#{version}.tar.gz"
 srcdir = "/usr/local/src/nginx-#{version}"
 
