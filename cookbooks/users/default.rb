@@ -10,9 +10,7 @@ node[:users].each do |u|
   end
 
   u[:groups].each do |g|
-    execute "usermod -G #{g} #{name}" do
-      command "usermod -G #{g} #{name}"
-    end
+    execute "gpasswd -a #{name} #{g}"
   end
 
   if u.has_key?('ssh-keys')
