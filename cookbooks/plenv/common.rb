@@ -1,6 +1,7 @@
 packages = case node[:platform]
            when %r(redhat|fedora)
              %w{
+              git
               perl-devel
               bzip2-devel
               zlib-devel
@@ -18,6 +19,7 @@ packages = case node[:platform]
              }
            when %r(debian|ubuntu)
              %w{
+              git
               autoconf
               build-essential
               libssl-dev
