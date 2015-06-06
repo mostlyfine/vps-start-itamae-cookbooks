@@ -21,13 +21,12 @@ template "/etc/profile.d/plenv.sh" do
 end
 
 node[:plenv][:versions].each do |version|
-  execute "plenv install #{version}" do
-    command ". /etc/profile.d/plenv.sh && plenv install #{version}"
+  execute ". /etc/profile.d/plenv.sh && plenv install #{version}" do
     not_if "test `. /etc/profile.d/plenv.sh && plenv versions | grep '#{version}' -c` != 0"
   end
 end
 
-if node[:plenv][:global]
-  execute ". /etc/profile.d/plenv.sh && plenv global #{node[:plenv][:global]} && plenv rehash && plenv install-cpanm"
+execute ". /etc/profile.d/plenv.sh && plenv global #{node[:plenv][:global]} && plenv rehash && plenv install-cpanm" do
+  not_if node[:plenv][:global]
 end
 
