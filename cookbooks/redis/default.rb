@@ -1,7 +1,19 @@
-include_recipe "epel.rb"
+case node[:platform]
 
-package "redis"
+when /centos|redhat|fedora/
+  include_recipe "epel.rb"
 
-service "redis" do
-  action [:enable, :start]
+  package "redis"
+
+  service "redis" do
+    action [:enable, :start]
+  end
+
+when /ubuntu|debian/
+  package "redis-server"
+
+  service "redis-server" do
+    action [:enable, :start]
+  end
 end
+
