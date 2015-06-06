@@ -4,6 +4,7 @@ node[:users].each do |u|
 
   user name do
     home home
+    shell u[:shell] || "/bin/bash"
     password u[:password]
     not_if "grep #{name} /etc/passwd"
   end
