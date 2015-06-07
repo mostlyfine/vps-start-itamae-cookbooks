@@ -9,12 +9,14 @@ plenv:
   versions:
     - 5.22.0
 
-rtn_rbenv:
+rbenv:
+  path: /usr/local/rbenv
   global: 2.2.2
   versions:
-    2.2.2:
-      - bundler
-      - pry
+    - 2.2.2
+  gems:
+    - bundler
+    - pry
 
 users:
   - id: sawa

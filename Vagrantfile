@@ -16,6 +16,7 @@ Vagrant.configure(2) do |config|
       "cookbooks/mongodb/default.rb",
       "cookbooks/mysql/default.rb",
       "cookbooks/plenv/default.rb",
+      "cookbooks/rbenv/default.rb",
     ]
   end
 end
