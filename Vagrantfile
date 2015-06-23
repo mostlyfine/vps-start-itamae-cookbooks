@@ -8,15 +8,15 @@ Vagrant.configure(2) do |config|
   config.vm.provision :itamae do |config|
     config.sudo = true
     config.yaml = "roles/development.yml"
-    config.recipes = [
-      "cookbooks/developmenttool.rb",
-      "cookbooks/users/default.rb",
-      "cookbooks/nginx/default.rb",
-      "cookbooks/redis/default.rb",
-      "cookbooks/mongodb/default.rb",
-      "cookbooks/mysql/default.rb",
-      "cookbooks/plenv/default.rb",
-      "cookbooks/rbenv/default.rb",
-    ]
+    config.recipes = %w{
+      cookbooks/developmenttool.rb
+      cookbooks/users/default.rb
+      cookbooks/nginx/install.rb
+      cookbooks/redis/default.rb
+      cookbooks/mongodb/default.rb
+      cookbooks/mysql/default.rb
+      cookbooks/plenv/default.rb
+      cookbooks/rbenv/default.rb
+    }
   end
 end
