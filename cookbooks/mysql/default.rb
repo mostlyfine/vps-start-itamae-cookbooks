@@ -1,10 +1,8 @@
 case node[:platform]
-
 when /centos|redhat|fedora/
-  remote_file "/etc/yum.repos.d/mysql-community.repo"
-  remote_file "/etc/pki/rpm-gpg/RPM-GPG-KEY-mysql"
-
-  package "mysql-community-server"
+  package "mysql55-devel"
+  package "mysql55-server"
+  package "mysql55"
 
   service "mysqld" do
     action [:enable, :start]
@@ -17,3 +15,4 @@ when /ubuntu|debian/
     action [:enable, :start]
   end
 end
+
