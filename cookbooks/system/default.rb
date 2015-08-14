@@ -1,0 +1,5 @@
+include_recipe 'update.rb'
+include_recipe 'selinux.rb'
+include_recipe 'tool.rb'
+include_recipe 'timezone.rb'
+include_recipe 'ntpdate.rb'
