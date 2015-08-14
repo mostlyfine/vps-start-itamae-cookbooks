@@ -15,7 +15,6 @@ packages = case node[:platform]
               libxml2-devel
               libxslt-devel
               expat-devel
-              tk-devel
              }
            when %r(debian|ubuntu)
              %w{
