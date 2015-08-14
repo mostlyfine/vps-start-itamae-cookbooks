@@ -1,5 +1,5 @@
 packages = case node[:platform]
-           when %r(redhat|fedora)
+           when /centos|redhat|fedora/
              %w{
               git
               perl-devel

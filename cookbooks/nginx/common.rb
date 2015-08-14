@@ -1,5 +1,5 @@
 packages = case node[:platform]
-           when /redhat|fedora/
+           when /centos|redhat|fedora/
              %w{
                gcc
                wget
