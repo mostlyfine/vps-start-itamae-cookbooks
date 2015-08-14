@@ -1,7 +1,7 @@
 admin_group: wheel
 
 nginx:
-  version: 1.9.1
+  version: 1.9.3
 
 plenv:
   path: /usr/local/plenv
