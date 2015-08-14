@@ -3,7 +3,9 @@ case node[:platform]
 when /centos|redhat|fedora/
   include_recipe "epel.rb"
 
-  package "redis"
+  package "redis" do
+    options '--enablerepo=epel'
+  end
 
   service "redis" do
     action [:enable, :start]
