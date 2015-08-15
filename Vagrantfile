@@ -9,12 +9,12 @@ Vagrant.configure(2) do |config|
     config.sudo = true
     config.yaml = "roles/development.yml"
     config.recipes = %w{
-      cookbooks/developmenttool.rb
+      cookbooks/system/default.rb
       cookbooks/users/default.rb
       cookbooks/nginx/install.rb
       cookbooks/redis/default.rb
       cookbooks/mongodb/default.rb
-      cookbooks/mysql/default.rb
+      cookbooks/mysql/community.rb
       cookbooks/plenv/default.rb
       cookbooks/rbenv/default.rb
     }
