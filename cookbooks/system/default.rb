@@ -1,4 +1,5 @@
 include_recipe 'update.rb'
+include_recipe 'hostname.rb'
 include_recipe 'selinux.rb'
 include_recipe 'tool.rb'
 include_recipe 'timezone.rb'
