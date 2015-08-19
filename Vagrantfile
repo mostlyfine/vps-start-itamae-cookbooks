@@ -17,6 +17,7 @@ Vagrant.configure(2) do |config|
       cookbooks/mysql/community.rb
       cookbooks/plenv/default.rb
       cookbooks/rbenv/default.rb
+      cookbooks/ndenv/default.rb
     }
   end
 end
