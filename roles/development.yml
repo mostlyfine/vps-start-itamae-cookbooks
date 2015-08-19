@@ -1,7 +1,7 @@
 admin_group: wheel
 
 nginx:
-  version: 1.9.3
+  version: 1.9.4
 
 plenv:
   path: /usr/local/plenv
@@ -11,9 +11,9 @@ plenv:
 
 rbenv:
   path: /usr/local/rbenv
-  global: 2.2.2
+  global: 2.2.3
   versions:
-    - 2.2.2
+    - 2.2.3
   gems:
     - bundler
     - pry
