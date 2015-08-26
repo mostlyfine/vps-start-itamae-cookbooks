@@ -24,6 +24,12 @@ rbenv:
     - bundler
     - pry
 
+goenv:
+  path: /usr/local/goenv
+  global: 1.5
+  versions:
+    - 1.5
+
 users:
   - id: sawa
     password: "$1$E7l6oltO$7Iz2YDdWQwIZSwP0MgbZd0"
