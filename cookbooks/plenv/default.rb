@@ -30,3 +30,6 @@ execute ". /etc/profile.d/plenv.sh && plenv global #{node[:plenv][:global]} && p
   not_if node[:plenv][:global]
 end
 
+node[:plenv][:cpans].each do |cpan|
+  execute ". /etc/profile.d/plenv.sh && cpanm #{cpan} "
+end

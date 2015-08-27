@@ -9,6 +9,8 @@ plenv:
   global: 5.22.0
   versions:
     - 5.22.0
+  cpans:
+    - Carton
 
 ndenv:
   path: /usr/local/ndenv
