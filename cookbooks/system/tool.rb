@@ -3,6 +3,7 @@ git
 wget
 curl
 zsh
+nkf
 screen
 tmux
 lsof
