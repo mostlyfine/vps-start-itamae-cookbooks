@@ -48,9 +48,7 @@ cd #{srcdir} && ./configure \
 --with-threads \
 --with-mail \
 --with-mail_ssl_module \
---with-file-aio \
---with-ipv6 \
---with-http_spdy_module
+--with-file-aio
 EOS
   not_if File.exist? "#{srcdir}/Makefile"
 end
