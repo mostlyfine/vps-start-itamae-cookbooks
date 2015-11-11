@@ -12,9 +12,9 @@ plenv:
 
 ndenv:
   path: /usr/local/ndenv
-  global: 0.12.7
+  global: 5.0.0
   versions:
-    - 0.12.7
+    - 5.0.0
 
 rbenv:
   path: /usr/local/rbenv
