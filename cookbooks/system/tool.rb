@@ -10,6 +10,7 @@ lsof
 dstat
 ctags
 unzip
+jq
 ).each do |pkg|
   package pkg
 end
