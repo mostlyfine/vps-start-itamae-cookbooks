@@ -4,6 +4,8 @@ Vagrant.configure(2) do |config|
   config.vm.network :private_network, ip: "192.168.33.10"
   config.vm.provider "virtualbox" do |v|
     v.customize ["modifyvm", :id, "--ostype", "RedHat_64"]
+    v.customize ["modifyvm", :id, "--cpuexecutioncap", "70"]
+    v.customize ["modifyvm", :id, "--memory", "2048"]
   end
   config.vm.provision :itamae do |config|
     config.sudo = true
