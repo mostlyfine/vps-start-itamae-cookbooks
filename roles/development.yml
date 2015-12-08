@@ -32,6 +32,10 @@ goenv:
   global: 1.5
   versions:
     - 1.5
+  packages:
+    - "github.com/motemen/ghq"
+    - "github.com/peco/peco/cmd/peco"
+    - "github.com/direnv/direnv"
 
 users:
   - id: sawa

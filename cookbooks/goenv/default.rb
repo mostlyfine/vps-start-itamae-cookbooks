@@ -22,3 +22,7 @@ end
 execute ". /etc/profile.d/goenv.sh && goenv global #{node[:goenv][:global]} && goenv rehash" do
   not_if node[:goenv][:global]
 end
+
+node[:goenv][:packages].each do |pkg|
+  execute ". /etc/profile.d/goenv.sh && GOPATH=#{goenv_root} && go get #{pkg}"
+end
