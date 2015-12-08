@@ -2,7 +2,7 @@ admin_group: wheel
 hostname: vagrant
 
 nginx:
-  version: 1.9.6
+  version: 1.9.7
 
 plenv:
   path: /usr/local/plenv
