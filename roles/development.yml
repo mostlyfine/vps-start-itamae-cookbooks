@@ -36,6 +36,7 @@ goenv:
     - "github.com/motemen/ghq"
     - "github.com/peco/peco/cmd/peco"
     - "github.com/direnv/direnv"
+    - "github.com/github/hub"
 
 users:
   - id: sawa
