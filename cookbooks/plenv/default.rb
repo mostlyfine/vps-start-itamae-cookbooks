@@ -13,6 +13,11 @@ git "#{plenv_root}/plugins/perl-build" do
   user plenv_user
 end
 
+git "#{plenv_root}/plugins/plenv-update" do
+  repository "git://github.com/dayflower/plenv-update.git"
+  user plenv_user
+end
+
 template "/etc/profile.d/plenv.sh" do
   owner "root"
   group "root"
@@ -26,8 +31,8 @@ node[:plenv][:versions].each do |version|
   end
 end
 
-execute ". /etc/profile.d/plenv.sh && plenv global #{node[:plenv][:global]} && plenv rehash && plenv install-cpanm" do
-  not_if node[:plenv][:global]
+if node[:plenv][:global]
+  execute ". /etc/profile.d/plenv.sh && plenv global #{node[:plenv][:global]} && plenv rehash && plenv install-cpanm && plenv exec cpanm Carton"
 end
 
 node[:plenv][:cpans].each do |cpan|
