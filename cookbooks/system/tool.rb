@@ -3,14 +3,12 @@ git
 wget
 curl
 zsh
-nkf
 screen
 tmux
 lsof
 dstat
 ctags
 unzip
-jq
 ).each do |pkg|
   package pkg
 end
