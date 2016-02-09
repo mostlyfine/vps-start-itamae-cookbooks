@@ -26,5 +26,6 @@ when /centos|redhat|fedora/
 when /ubuntu|debian/
   package "vim"
   package "keychain"
+  package "lv"
 end
 
