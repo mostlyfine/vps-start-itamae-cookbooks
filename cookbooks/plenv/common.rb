@@ -2,6 +2,10 @@ packages = case node[:platform]
            when /centos|redhat|fedora/
              %w{
               git
+              gcc
+              make
+              autoconf
+              patch
               perl-devel
               bzip2-devel
               zlib-devel
