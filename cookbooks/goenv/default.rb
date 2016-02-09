@@ -14,12 +14,14 @@ template "/etc/profile.d/goenv.sh" do
 end
 
 node[:goenv][:versions].each do |version|
-  execute ". /etc/profile.d/goenv.sh && goenv install #{version}" do
+  execute "install golang" do
+    command ". /etc/profile.d/goenv.sh && goenv install #{version}"
     not_if "test `. /etc/profile.d/goenv.sh && goenv versions | grep '#{version}' -c` != 0"
   end
 end
 
-execute ". /etc/profile.d/goenv.sh && goenv global #{node[:goenv][:global]} && goenv rehash" do
+execute "set global go version" do
+  command ". /etc/profile.d/goenv.sh && goenv global #{node[:goenv][:global]} && goenv rehash"
   not_if node[:goenv][:global]
 end
 
