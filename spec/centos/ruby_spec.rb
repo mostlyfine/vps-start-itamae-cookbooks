@@ -7,7 +7,7 @@ describe command('source /etc/profile.d/rbenv.sh; which rbenv') do
 end
 
 # install ruby
-describe command("source /etc/profile.d/rbenv.sh; rbenv versions | grep 2.2.2") do
+describe command("source /etc/profile.d/rbenv.sh; rbenv versions | grep 2.3.0") do
   let(:disable_sudo) { true }
-  its(:stdout) { should match(/2\.2\.2/) }
+  its(:stdout) { should match(/2\.3\.0/) }
 end
