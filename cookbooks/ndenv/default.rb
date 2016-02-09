@@ -1,5 +1,5 @@
-ndenv_user = node[:ndenv][:user] || "root"
-ndenv_root = node[:ndenv][:path] || "/home/#{ndenv_user}/.ndenv"
+ndenv_user = node[:ndenv] && node[:ndenv][:user] || "root"
+ndenv_root = node[:ndenv] && node[:ndenv][:path] || "/usr/local/ndenv"
 
 git ndenv_root do
   repository "git://github.com/riywo/ndenv.git"

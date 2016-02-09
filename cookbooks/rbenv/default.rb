@@ -1,5 +1,5 @@
-rbenv_user = node[:rbenv][:user] || "root"
-rbenv_root = node[:rbenv][:path] || "/home/#{rbenv_user}/.rbenv"
+rbenv_user = node[:rbenv] && node[:rbenv][:user] || "root"
+rbenv_root = node[:rbenv] && node[:rbenv][:path] || "/usr/local/rbenv"
 
 include_recipe "./common.rb"
 

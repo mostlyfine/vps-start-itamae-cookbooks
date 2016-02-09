@@ -1,5 +1,5 @@
-plenv_user = node[:plenv][:user] || "root"
-plenv_root = node[:plenv][:path] || "/home/#{plenv_user}/.plenv"
+plenv_user = node[:plenv] && node[:plenv][:user] || "root"
+plenv_root = node[:plenv] && node[:plenv][:path] || "/usr/local/plenv"
 
 include_recipe "./common.rb"
 

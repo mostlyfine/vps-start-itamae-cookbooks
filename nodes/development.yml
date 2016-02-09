@@ -1,34 +1,30 @@
 admin_group: wheel
-hostname: vagrant
+hostname: dev_aws
 
 nginx:
   version: 1.9.7
 
 plenv:
-  path: /usr/local/plenv
-  global: 5.22.0
+  global: 5.22.1
   versions:
-    - 5.22.0
+    - 5.22.1
   cpans:
     - Carton
 
 ndenv:
-  path: /usr/local/ndenv
-  global: 5.0.0
+  global: 5.5.0
   versions:
-    - 5.0.0
+    - 5.5.0
 
 rbenv:
-  path: /usr/local/rbenv
-  global: 2.2.3
+  global: 2.3.0
   versions:
-    - 2.2.3
+    - 2.3.0
   gems:
     - bundler
     - pry
 
 goenv:
-  path: /usr/local/goenv
   global: 1.5
   versions:
     - 1.5

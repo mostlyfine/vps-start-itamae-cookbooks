@@ -1,5 +1,5 @@
-goenv_user = node[:goenv][:user] || "root"
-goenv_root = node[:goenv][:path] || "/home/#{goenv_user}/.goenv"
+goenv_user = node[:goenv] && node[:goenv][:user] || "root"
+goenv_root = node[:goenv] && node[:goenv][:path] || "/usr/local/goenv"
 
 git goenv_root do
   repository "git://github.com/wfarr/goenv.git"
