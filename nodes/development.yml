@@ -1,5 +1,5 @@
 admin_group: wheel
-hostname: dev_aws
+hostname: vagrant
 
 nginx:
   version: 1.9.7
