@@ -25,9 +25,9 @@ rbenv:
     - pry
 
 goenv:
-  global: 1.5
+  global: 1.6
   versions:
-    - 1.5
+    - 1.6
   packages:
     - "github.com/motemen/ghq"
     - "github.com/peco/peco/cmd/peco"
