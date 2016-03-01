@@ -10,6 +10,7 @@ node[:users].each do |u|
   end
 
   u[:groups].each do |g|
+    group g
     execute "gpasswd -a #{name} #{g}"
   end
 
