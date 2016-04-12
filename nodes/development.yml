@@ -2,7 +2,7 @@ admin_group: wheel
 hostname: vagrant
 
 nginx:
-  version: 1.9.7
+  version: 1.9.14
 
 plenv:
   global: 5.22.1
@@ -12,9 +12,9 @@ plenv:
     - Carton
 
 ndenv:
-  global: 5.5.0
+  global: 5.10.1
   versions:
-    - 5.5.0
+    - 5.10.1
 
 rbenv:
   global: 2.3.0
