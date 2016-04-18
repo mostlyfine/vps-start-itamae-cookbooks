@@ -1,4 +1,7 @@
 Vagrant.configure(2) do |config|
+
+  config.vm.synced_folder ".", "/vagrant"
+
   config.vm.provider "virtualbox" do |v|
     v.customize ["modifyvm", :id, "--ostype", "RedHat_64"]
     v.customize ["modifyvm", :id, "--cpuexecutioncap", "70"]
