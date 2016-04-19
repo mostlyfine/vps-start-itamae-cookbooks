@@ -34,6 +34,15 @@ goenv:
     - "github.com/direnv/direnv"
     - "github.com/github/hub"
 
+pyenv:
+  global: 3.5.0
+  versions:
+    - 3.5.0
+    - 2.7.9
+  packages:
+    - "ansible"
+    - "--upgrade https://storage.googleapis.com/tensorflow/mac/tensorflow-0.8.0rc0-py2-none-any.whl"
+
 users:
   - id: sawa
     password: "$1$E7l6oltO$7Iz2YDdWQwIZSwP0MgbZd0"
